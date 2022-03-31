@@ -6,7 +6,7 @@ import { RnPackageTestGgcView } from 'react-native-rn-package-test-ggc';
 export default function App() {
   return (
     <View style={styles.container}>
-      <RnPackageTestGgcViewManager color="#32a852" style={styles.box} />
+      <RnPackageTestGgcView color="#32a852" style={styles.box} />
     </View>
   );
 }
