@@ -1,27 +1,20 @@
-# react-native-rn-package-test-ggc
+##Create library
 
-rn test package
+https://reactnative.dev/docs/native-modules-setup
 
-## Installation
 
-```sh
-npm install react-native-rn-package-test-ggc
-```
+#Run:
 
-## Usage
+npx create-react-native-library react-native-awesome-module
 
-```js
-import { RnPackageTestGgcView } from "react-native-rn-package-test-ggc";
+#Comment this line in example/ios/Podfile:
+use_flipper!({ 'Flipper' => '0.80.0' })
 
-// ...
+#Run:
 
-<RnPackageTestGgcView color="tomato" />
-```
+npx react-native-builder-bob init
 
-## Contributing
+yarn
 
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+yarn example ios
 
-## License
-
-MIT
