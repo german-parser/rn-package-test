@@ -1,25 +1,26 @@
 import * as React from 'react';
 
-import { StyleSheet, View } from 'react-native';
-import { RnPackageTestGgcView } from 'react-native-rn-package-test-ggc';
+import { StyleSheet, Text, View } from 'react-native';
+import { ProfileView } from 'react-native-rn-package-test-ggc';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <RnPackageTestGgcView color="#32a852" style={styles.box} />
-    </View>
+    <>
+      <View style={styles.container}>
+        <Text>Shared Navbar</Text>
+      </View>
+      <ProfileView />
+      <View style={styles.container}>
+        <Text>Shared Botombar</Text>
+      </View>
+    </>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
+    height: 120,
+    alignItems: 'flex-start',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    padding: 20,
   },
 });

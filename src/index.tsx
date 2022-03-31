@@ -1,26 +1,34 @@
-import {
-  requireNativeComponent,
-  UIManager,
-  Platform,
-  ViewStyle,
-} from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 
-const LINKING_ERROR =
-  `The package 'react-native-rn-package-test-ggc' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo managed workflow\n';
+export const ProfileView = () => (
+  <View style={styles.container}>
+    <Text style={styles.title}>Custom package</Text>
+    <Text>Name</Text>
+    <TextInput style={styles.input} />
+    <Text>Surname</Text>
+    <TextInput style={styles.input} />
+    <Text>Mail</Text>
+    <TextInput style={styles.input} />
+    <Text>Tlf</Text>
+    <TextInput style={styles.input} />
+  </View>
+);
 
-type RnPackageTestGgcProps = {
-  color: string;
-  style: ViewStyle;
-};
-
-const ComponentName = 'RnPackageTestGgcView';
-
-export const RnPackageTestGgcView =
-  UIManager.getViewManagerConfig(ComponentName) != null
-    ? requireNativeComponent<RnPackageTestGgcProps>(ComponentName)
-    : () => {
-        throw new Error(LINKING_ERROR);
-      };
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'lightgray',
+    padding: 50,
+    alignSelf: 'stretch',
+    flex: 1,
+  },
+  input: {
+    borderWidth: 1,
+    width: 120,
+    marginVertical: 20,
+  },
+  title: {
+    marginVertical: 20,
+    fontSize: 24,
+  },
+});
