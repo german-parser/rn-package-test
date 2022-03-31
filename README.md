@@ -18,3 +18,8 @@ yarn
 
 yarn example ios
 
+# Release to npm
+
+## Run
+
+yarn release
